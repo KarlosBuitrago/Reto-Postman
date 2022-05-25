@@ -1,0 +1,338 @@
+{
+	"id": "e6f6c8b9-f861-4bf3-b8ef-ee8d0e7a17ff",
+	"name": "SimpleBooks-API",
+	"timestamp": "2022-05-25T19:44:00.024Z",
+	"collection_id": "0-07534fc5-afec-4a52-825d-543284239008",
+	"folder_id": 0,
+	"environment_id": "dbda5170-b2c8-4a32-b8b1-c5776fc6c4aa",
+	"totalPass": 20,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "ec4d7955-4373-4cff-94c1-5918f5990a74",
+			"name": "Estatus Api",
+			"url": "https://simple-books-api.glitch.me/status",
+			"time": 147,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Respuesta es OK": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Respuesta es OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				147
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Respuesta es OK": true
+				}
+			]
+		},
+		{
+			"id": "a9e7f5ee-39c7-4cef-a2fe-6bce59db5fac",
+			"name": "Obtener todos los libros",
+			"url": "https://simple-books-api.glitch.me/books?limit=3",
+			"time": 131,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validar libros no disponibles": true,
+				"Elementos encontrados": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validar libros no disponibles": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Elementos encontrados": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				131
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validar libros no disponibles": true,
+					"Elementos encontrados": true
+				}
+			]
+		},
+		{
+			"id": "736f341a-afc0-430c-8b86-3113040e052d",
+			"name": "Obtener libro por ID",
+			"url": "https://simple-books-api.glitch.me/books/3",
+			"time": 139,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validar cantidad en stock": true,
+				"la respuesta contiene texto": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validar cantidad en stock": {
+					"pass": 1,
+					"fail": 0
+				},
+				"la respuesta contiene texto": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				139
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validar cantidad en stock": true,
+					"la respuesta contiene texto": true
+				}
+			]
+		},
+		{
+			"id": "7a1c45df-7bf0-40ac-8159-d975d7ac8a0e",
+			"name": "Crear orden",
+			"url": "https://simple-books-api.glitch.me/orders",
+			"time": 287,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Esquema correcto": true,
+				"Validar id": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Esquema correcto": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validar id": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				287
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Esquema correcto": true,
+					"Validar id": true
+				}
+			]
+		},
+		{
+			"id": "1c5fa11e-3ac6-479d-964a-875d439cff31",
+			"name": "Obtener lista de ordenes",
+			"url": "https://simple-books-api.glitch.me/orders",
+			"time": 143,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"La respuesta contiene la palabra Ruecker": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"La respuesta contiene la palabra Ruecker": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				143
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"La respuesta contiene la palabra Ruecker": true
+				}
+			]
+		},
+		{
+			"id": "28bc46da-8b67-4529-a7d1-90fb9d814de2",
+			"name": "Obtener una orden",
+			"url": "https://simple-books-api.glitch.me/orders/t9Q6rP_qT5gROiB5VCjKc",
+			"time": 244,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Es igual el ID": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Es igual el ID": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				244
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Es igual el ID": true
+				}
+			]
+		},
+		{
+			"id": "e8801629-ee5c-4f3c-8453-f14602e2b64f",
+			"name": "Actualizar una orden",
+			"url": "https://simple-books-api.glitch.me/orders/t9Q6rP_qT5gROiB5VCjKc",
+			"time": 435,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204": true,
+				"Envio es texto crudo": true,
+				"Esquema correcto": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Envio es texto crudo": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Esquema correcto": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				435
+			],
+			"allTests": [
+				{
+					"Status code is 204": true,
+					"Envio es texto crudo": true,
+					"Esquema correcto": true
+				}
+			]
+		},
+		{
+			"id": "a8b70803-e9a8-46dd-bc85-39b71f3a0fec",
+			"name": "Borrar una orden",
+			"url": "https://simple-books-api.glitch.me/orders/t9Q6rP_qT5gROiB5VCjKc",
+			"time": 288,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204": true,
+				"Mensaje de respuesta vacio": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Mensaje de respuesta vacio": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				288
+			],
+			"allTests": [
+				{
+					"Status code is 204": true,
+					"Mensaje de respuesta vacio": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1814,
+	"collection": {
+		"requests": [
+			{
+				"id": "ec4d7955-4373-4cff-94c1-5918f5990a74",
+				"method": "GET"
+			},
+			{
+				"id": "a9e7f5ee-39c7-4cef-a2fe-6bce59db5fac",
+				"method": "GET"
+			},
+			{
+				"id": "736f341a-afc0-430c-8b86-3113040e052d",
+				"method": "GET"
+			},
+			{
+				"id": "7a1c45df-7bf0-40ac-8159-d975d7ac8a0e",
+				"method": "POST"
+			},
+			{
+				"id": "1c5fa11e-3ac6-479d-964a-875d439cff31",
+				"method": "GET"
+			},
+			{
+				"id": "28bc46da-8b67-4529-a7d1-90fb9d814de2",
+				"method": "GET"
+			},
+			{
+				"id": "e8801629-ee5c-4f3c-8453-f14602e2b64f",
+				"method": "PATCH"
+			},
+			{
+				"id": "a8b70803-e9a8-46dd-bc85-39b71f3a0fec",
+				"method": "DELETE"
+			}
+		]
+	}
+}

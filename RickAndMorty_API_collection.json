@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "04ca1d78-e9b4-49b9-916d-6344f194ae6a",
+		"name": "RickAndMorty-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Obtener personajes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const personajes = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Tipo de especie de un personaje\", () => {\r",
+							"    var miPersonaje = personajes.results.find(x => x.name = \"Alexander\")\r",
+							"    pm.expect(miPersonaje.species).to.be.eql(\"Human\")\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Url_Base_Rick}}/character/",
+					"host": [
+						"{{Url_Base_Rick}}"
+					],
+					"path": [
+						"character",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener personajes por pagina",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const personajes = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Tipo de especie de un personaje\", () => {\r",
+							"    var miPersonaje = personajes.results.find(x => x.id = 321)\r",
+							"    pm.expect(miPersonaje.name).to.be.eql(\"Shrimply Pibbles\")\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Url_Base_Rick}}/character/?page=17",
+					"host": [
+						"{{Url_Base_Rick}}"
+					],
+					"path": [
+						"character",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "17"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener personajes por id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"var personajes = pm.response.json();\r",
+							"\r",
+							"console.log(personajes)\r",
+							"\r",
+							"pm.test(\"Tipo de especie de un personaje\", () => {\r",
+							"    pm.expect(personajes.species).to.be.eql(\"Human\")\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Url_Base_Rick}}/character/4",
+					"host": [
+						"{{Url_Base_Rick}}"
+					],
+					"path": [
+						"character",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener multiples personajes por Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const arreglo = pm.response.json();\r",
+							"\r",
+							"console.log(arreglo)\r",
+							"\r",
+							"pm.test(\"Arreglo es vacio\", () => {\r",
+							"    pm.expect(arreglo).to.be.empty\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Url_Base_Rick}}/character/-1, 855",
+					"host": [
+						"{{Url_Base_Rick}}"
+					],
+					"path": [
+						"character",
+						"-1, 855"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Url_Base_Rick",
+			"value": "https://rickandmortyapi.com"
+		}
+	]
+}
